@@ -1,0 +1,50 @@
+<html>
+    <head>
+		<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+		<title>To Do App</title>
+    </head>
+    <body>
+
+        <h1>Todo</h1>
+
+        <div class="content">
+
+            <form id="add-todo-form">
+			<input type="text" name="name" placeholder="Your Name"/>
+			<input type="text" name="work" placeholder="Write Todo"/>
+			<input type="text" name="workingtime" placeholder="Work Time"/>
+			<button>Add Todo</button>
+			</form>
+
+            <ul id="todo-list"></ul>
+
+        </div>
+		
+=
+	
+			<script>
+			  
+			  var firebaseConfig = {
+				apiKey: "AIzaSyD7sYeSuCORUNuGrhtI8bvcDWi9f9KryoM",
+				authDomain: "todoapp-the-net-ninja.firebaseapp.com",
+				projectId: "todoapp-the-net-ninja",
+				storageBucket: "todoapp-the-net-ninja.appspot.com",
+				messagingSenderId: "487410033921",
+				appId: "1:487410033921:web:89d768ff337d6a3f3d2700",
+				measurementId: "G-0NEJN3M5M0"
+			  };
+			  // Initialize Firebase
+			  firebase.initializeApp(firebaseConfig);
+			  firebase.analytics();
+			  let db = firebase.firestore();
+			  db.settings({timestampInSnapshots:true})
+			</script>
+        <script src="app.js">
+
+		</script>
+    </body>
+</html>
